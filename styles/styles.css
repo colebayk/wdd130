@@ -33,25 +33,35 @@ main img {
     border: var(--border);
     padding: 2px;
     box-shadow: 0 0 30px grey;
+    margin: 0 0 1rem 1rem;
+    
 }
 
 p {
     padding: 0;
+    margin: 1rem;
 }
 
 main {
-    max-width: 840px;
+    max-width: 640px;
 }
 
 aside {
     position: relative;
     width: 20em;
     text-align: center;
+
 }
 
 aside img {
     width: 200px;
     height: var(--height);
+}
+
+aside h2 {
+  position: absolute;
+  top: 1px;
+  left: 30px;
 }
 
 footer {
@@ -61,17 +71,20 @@ footer {
     padding: var(--padding-header-footer);
 }
 /*  Class Selector */
+
 .box {
-     margin: 1rem;
-     border: 1px solid rgb(0 0 0 / 10%);
+     margin:1rem;
+     border: 1px solid rgba(0 0 0 / 10%);
      padding: 1rem;
      background-color: #eee;
      color:#333;
+    
 }
 
-aside h2 {
-  position: absolute;
-  top: 2px;
-  left: 2pxs;
+.indent {
+    padding: 2rem;
 }
+
+
+
 
