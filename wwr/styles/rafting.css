@@ -2,7 +2,7 @@
   /* Colors */
   --primary-color: #87CEEB;
   --secondary-color: #1A2A4A;
-  --accent-color1: #000000;
+  --accent-color1: #1a2a4a;
   --accent-color2: #F4A460;
   --heading-font: 'Times New Roman', sans-serif;
   --body-font: Arial, sans-serif, Helvetica;
@@ -54,7 +54,7 @@ h1 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.8;
     background-color: var(--accent-color1);
     color: #fff;
 }
@@ -74,4 +74,10 @@ article {
     float: right;
     width: 125px;
     border-radius: 1rem;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--accent-color1);
+    color: #fff;
 }
