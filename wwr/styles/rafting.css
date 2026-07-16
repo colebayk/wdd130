@@ -14,11 +14,15 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: var(--body-font);
     color: var(--accent-color1);
 }
 
+header , footer {
+    background-color: var(--primary-color);
+}
 header, main, footer {
     width: 840px;
     margin: 0 auto;
@@ -78,6 +82,6 @@ nav, p, section, article {
 
 h2 {
     text-align: center;
-    background-color: var(--accent-color1);
+    background-color: var(--secondary-color);
     color: #fff;
 }
