@@ -12,18 +12,29 @@
 }
 
 nav {
-    background-color: var(--primary-color);
-    padding:var(--padding-header-footer)
+  background-color: steelblue;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+
 nav a {
-    color: white;
-    display: block;
-    padding: 4px; 
+
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff; 
+
 }
 
 h1 {
     color: var(--primary-color);
+    border-bottom: 2px slateblue solid;
+    padding-bottom: 1px;
 }
 
 main img {
@@ -31,9 +42,9 @@ main img {
     width: 150px;
     height: var(--height);
     border: var(--border);
-    padding: 2px;
+    padding: 3px;
     box-shadow: 0 0 30px grey;
-    margin: 0 0 1rem 1rem;
+    margin: 0 0 2rem 2rem;
     
 }
 
@@ -42,38 +53,29 @@ p {
     margin: 1rem;
 }
 
-main {
-    max-width: 640px;
-}
-
 aside {
     position: relative;
     width: 20em;
     text-align: center;
-
 }
 
 aside img {
-    width: 200px;
+    width: 150px;
     height: var(--height);
 }
 
 aside h2 {
   position: absolute;
-  top: 1px;
-  left: 30px;
+  top: 70px;
+  left: 10px;
+  color: slateblue;
 }
 
-footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
-    padding: var(--padding-header-footer);
-}
+
 /*  Class Selector */
 
 .box {
-     margin:1rem;
+     margin:2rem;
      border: 1px solid rgba(0 0 0 / 10%);
      padding: 1rem;
      background-color: #eee;
@@ -85,5 +87,29 @@ footer {
     padding: 2rem;
 }
 
+header, .grid,footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
 
+.grid {
+  display: grid;
+  align-items: center;
+}
+    
+main {
+  grid-column: 2/2;
+  margin: 1rem;
+}
+    
+aside {
+  width: 15rem;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
 
+footer p {
+   text-align: center;
+   border-top: slateblue solid;
+}
