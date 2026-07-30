@@ -3,7 +3,9 @@
   --primary-color: #074057;
   --secondary-color: #1A2A4A;
   --accent-color1: #1a2a4a;
-  --accent-color2: #F4A460;
+  --accent-color3: #fff;
+  --accent-color4:#f9f9f9;
+  --accent-color5: black   ;
   --heading-font: 'Times New Roman', sans-serif;
   --body-font: Arial, sans-serif, Helvetica;
 }
@@ -30,7 +32,7 @@ header, main, footer {
 
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--accent-color2);
+    color: var(--secondary-color);
 }
 
 nav, p, section, article {
@@ -60,7 +62,7 @@ nav, p, section, article {
     text-align: center;
     opacity: 0.8;
     background-color: var(--accent-color1);
-    color: #fff;
+    color: var(--accent-color3);
 }
 
 .hero article {
@@ -70,7 +72,7 @@ nav, p, section, article {
     padding: 5px;
     opacity: 0.8;
     background-color: var(--accent-color1);
-    color: #fff;
+    color: var(--accent-color3);
 }
 
 
@@ -83,7 +85,7 @@ nav, p, section, article {
 h2 {
     text-align: center;
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--accent-color3);
 }
 
 header {
@@ -118,13 +120,14 @@ header {
 .references a {
     text-decoration: none;
     background-color: none;
-    color: #fff;
+    color: var(--accent-color3);
     border-radius: 5px;
     padding: 0.5rem 0.5rem;
+   
 }
 
 .references a:hover {
-    background-color: var(--accent-color2);
+    background-color: var(--accent-color5);
 }
 
  .adventure-grid {
@@ -142,15 +145,249 @@ header {
     text-align: center;
  }
 
- footer {
-   display: flex;
-    }
+footer {
+    background: var(--primary-color);
+    color: var(--accent-color3);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 4px solid var(--secondary-color);
+    margin-top: 2rem;
+}
 
- .social-media {
-        justify-content: space-between;
-        height: 5px;
-        width: 5px;
-    }
 footer p {
-    justify-content: flex-end;
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--accent-color3);
+}
+
+footer .socialmedia {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+footer .socialmedia a {
+    transition: transform 0.3s ease;
+}
+
+footer .socialmedia a:hover {
+    transform: scale(1.15);
+}
+
+footer .socialmedia img {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+
+
+/* ===== CONTACT PAGE STYLES ===== */
+
+.company-info {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.company-info h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.address, .map {
+    flex: 1 1 45%;
+    background: var(--accent-color4);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.address h2, .map h2 {
+    margin-top: 0;
+    color: var(--accent-color3);
+}
+
+.address p {
+    line-height: 1.8;
+}
+
+.map iframe {
+    border: none;
+    border-radius: 8px;
+}
+
+/* Employee Profiles */
+.employees {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--accent-color4);
+}
+
+.employees h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.employee-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.employee-grid figure {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+    background: var(--accent-color4);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.employee-grid figure:hover {
+    transform: translateY(-5px);
+}
+
+.employee-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+}
+
+.employee-grid figcaption {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.employee-grid figcaption strong {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: var(--accent-color4);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color3);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form fieldset {
+    margin-top: 1.2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form fieldset legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.contact-form fieldset label {
+    display: inline-block;
+    margin-right: 1.5rem;
+    font-weight: normal;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: auto;
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+    background: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+    }
+    
+    .address, .map {
+        flex: 1 1 100%;
+    }
+    
+    .employee-grid figure {
+        flex: 1 1 150px;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
 }
